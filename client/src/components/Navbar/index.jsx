@@ -1,11 +1,16 @@
 import React, {useState} from 'react'
 import MobileNavbar from './Mobile/MobileNavbar'
-import NormalNavbar from './Navbar'
+import TabletNavbar from './tablet/tablet_navbar'
+import DesktopNavbar from './desktop/desktop_navbar'
 
 const Main = () =>{
     const [ vpWidth, setVpWidth ] = useState(window.innerWidth)
 
-    const display = () => vpWidth <= 600 ? <MobileNavbar /> : <NormalNavbar />
+    const display = () => {
+        if(vpWidth >= 1000) return <DesktopNavbar />
+        if(vpWidth > 600) return <TabletNavbar />
+        if(vpWidth <= 600) return <MobileNavbar />
+    }
 
     const check = () => setVpWidth(window.innerWidth)
 
