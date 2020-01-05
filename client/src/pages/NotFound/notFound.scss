@@ -1,0 +1,26 @@
+@import '../../components/cssUtils.scss';
+
+#NotFound{
+    .container{
+        position: absolute;
+        word-wrap: wrap;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &-text{
+            text-align: center;
+            font-size: 5em;
+            animation-name: move;
+            animation: 1s linear 1s infinite alternate move;
+        }
+    }
+}
+
+@keyframes move{
+    0%{
+        font-size: 4em;
+    } 
+    100%{
+        font-size: 5em;
+    }
+}

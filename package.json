@@ -1,0 +1,35 @@
+{
+  "name": "gamers_link",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "nodemon server.js",
+    "start:dev": "concurrently \"nodemon server.js --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "cd client && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmanuel-brown/GamersLink.git"
+  },
+  "keywords": [],
+  "author": "Emmanuel Brown",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "compression": "^1.7.4",
+    "concurrently": "^5.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.8.3",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "validator": "^12.1.0"
+  }
+}

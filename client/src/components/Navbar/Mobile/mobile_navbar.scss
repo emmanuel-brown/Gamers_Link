@@ -1,0 +1,55 @@
+@import '../../cssUtils.scss';
+
+#header{
+    margin: 0 auto;
+    .txt{
+        font-size: 3em;
+        background-color: $accent1;
+        color: $accent4;
+        text-align: center;
+    }
+}
+
+#MobileMenu{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: $accent3;
+    .link{
+        color: $accent1;
+        font-weight: bolder;
+        font-size: 3em;
+        text-decoration: none;
+        animation-name: slideUp;
+        ::nth-child(1){
+            animation-fill-mode: forwards;
+            color: red;
+        }
+    }
+}
+
+#navbar{
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    height: 4em;
+    width: 100%;
+    background: $accent1;
+    display: flex;
+    justify-content: space-between;
+    .bttn{
+        margin: .4em 1em;
+        &-img{
+            height: 3em;
+            width: 3em;
+        }
+    }
+}
