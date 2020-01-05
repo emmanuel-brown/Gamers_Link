@@ -4,10 +4,12 @@ const helmet = require('helmet')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const compression = require('compression')
+const cors = require('cors')
 const PORT = process.env.PORT || 4000
 
 const app = express()
 
+app.use(cors())
 app.use(compression())
 app.use(morgan('tiny'))
 app.use(express.urlencoded({ extended: true }))
