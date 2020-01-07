@@ -10,7 +10,10 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: auto;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         height: 10em;
         width: 10em;
         border-radius: 100%;
@@ -53,6 +56,8 @@ body{
         }
     }
     .form{
+        border: $accent3 solid 3px;
+        color: $accent5;
         padding: 1% 10%;
         background-color: rgba(142, 228, 175, .7);
         &-field{
@@ -76,8 +81,8 @@ body{
             margin-top: 1em;
             &-bttn{
                 border: none;
-                background-color: $accent1;
-                color: $accent3;
+                background-color: $accent3;
+                color: $accent4;
                 height: 3em;
                 width: 7em;
                 font-size: 1em;
@@ -89,10 +94,12 @@ body{
 
 @media only screen and (min-width: 1000px) {
     .form {
-      margin-top: 15%;
-      margin-left: auto;
-      margin-right: auto;
-      width: 700px;
+        background-color: $accent1 !important;
+        margin-top: 15%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 23em;
+        width: 500px;
     }
   }
 
