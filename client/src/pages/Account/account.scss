@@ -10,7 +10,7 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 2em auto;
+        margin: auto;
         height: 10em;
         width: 10em;
         border-radius: 100%;
@@ -45,6 +45,7 @@ body{
 #content{
     .header{
         margin: 0 auto;
+        width: 100%;
         background-color: $accent3;
         &-txt{
             opacity: 1;
@@ -54,10 +55,6 @@ body{
     .form{
         padding: 1% 10%;
         background-color: rgba(142, 228, 175, .7);
-        margin-top: 15%;
-        margin-left: auto;
-        margin-right: auto;
-        width: 700px;
         &-field{
             display: flex;
             flex-direction: column;
