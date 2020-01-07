@@ -87,3 +87,12 @@ body{
     }
 }
 
+@media only screen and (min-width: 1000px) {
+    .form {
+      margin-top: 15%;
+      margin-left: auto;
+      margin-right: auto;
+      width: 700px;
+    }
+  }
+
