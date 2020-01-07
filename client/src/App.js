@@ -1,15 +1,12 @@
 import React from 'react';
 import './App.scss'
-
 import {
   BrowserRouter,
   Route,
   Switch,
   Redirect
 } from 'react-router-dom'
-
 import Navbar from './components/Navbar'
-
 //Pages
 import NotFound from './pages/NotFound'
 import Account from './pages/Account'

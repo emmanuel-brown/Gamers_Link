@@ -54,10 +54,6 @@ body{
     .form{
         padding: 1% 10%;
         background-color: rgba(142, 228, 175, .7);
-        margin-top: 15%;
-        margin-left: auto;
-        margin-right: auto;
-        width: 700px;
         &-field{
             display: flex;
             flex-direction: column;
@@ -89,4 +85,13 @@ body{
         }
     }
 }
+
+@media only screen and (min-width: 1000px) {
+    .form {
+      margin-top: 15%;
+      margin-left: auto;
+      margin-right: auto;
+      width: 700px;
+    }
+  }
 
