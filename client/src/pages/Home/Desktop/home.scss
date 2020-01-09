@@ -1,0 +1,29 @@
+@import '../../../components/cssUtils.scss';
+
+#Home-Desktop{
+    height: 100vh;
+    .hero{
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-container{
+            display: flex;
+            width: 900px;
+            height: 600px;
+            background-color: white;
+            &-txt{
+                text-align: left;
+                color: $accent3;
+                font-weight: bolder;
+                font-size: 3em;
+            }
+        }
+    }
+}

@@ -1,31 +1,26 @@
 import React, {useState} from 'react'
-import './account.scss'
-import SignUp from './SignUp'
-import Login from './Login'
+import Mobile from './mobile'
+import Tablet from './tablet'
 
 const Account = () =>{
     const [ type, setType ] = useState("")
+
+    const [ vpWidth, setVpWidth ] = useState(window.innerWidth)
+
+    const display = () => {
+        // if(vpWidth >= 1000) return <DesktopNavbar />
+        if(vpWidth > 900) return <Tablet />
+        if(vpWidth <= 900) return <Mobile />
+    }
+
+    const check = () => setVpWidth(window.innerWidth)
+
+    setInterval(check, 1000);
     
     return(
-        <div>
-            {type === "" &&
-                <div id="choose">
-                    <div className="location">
-                        <h1 className="location-txt">User?</h1>
-                    </div>
-                    <div className="select">
-                        <button className="select-bttn" onClick={ () => setType("signUp") }>
-                            <p className="select-bttn-txt">Sign Up</p>
-                        </button>
-                        <button className="select-bttn" onClick={ () => setType("login") }>
-                            <p className="select-bttn-txt">Login</p>
-                        </button>
-                    </div>
-                </div>
-            }
-            { type === "signUp" && <SignUp change={ () => setType("login") } /> }
-            { type === "login" && <Login change={ () => setType("signUp") }/> }
-        </div>
+        <>
+            {display()}
+        </>
     )
 }
 

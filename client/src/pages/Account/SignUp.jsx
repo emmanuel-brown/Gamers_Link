@@ -26,7 +26,7 @@ const SignUp = props =>{
     return(
         <main id="content">
             <header className="header">
-                <h1 className="header-txt">SignUp</h1>
+                <h1 className="header-txt">Sign Up</h1>
             </header>
             <form onSubmit={ handleSubmit } className="form">
                 {input("firstName", "First Name:")}
