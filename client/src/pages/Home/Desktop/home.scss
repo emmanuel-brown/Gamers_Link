@@ -3,27 +3,78 @@
 #Home-Desktop{
     height: 100vh;
     .hero{
-        height: 100vh;
-        background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        height: 75vh;
+        background-color: $accent5;
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         &-container{
+            height: 100vh;
+            position: relative;
             display: flex;
-            width: 900px;
-            height: 600px;
-            background-color: white;
-            &-txt{
-                text-align: left;
-                color: $accent3;
-                font-weight: bolder;
-                font-size: 3em;
-            }
+            // justify-content: space-around;
+            margin: 0 1em;
+            max-width: 3000px;
+            min-width: 1000px;
+            height: 800px;
+            background-color: transparent;
+            padding: 3em;
+            padding-top: 5em;
+            padding-bottom: 0;
         }
     }
 }
+
+#Home-Desktop .hero-container{
+    &-left{
+        flex: 1;
+        &-txt{
+            text-align: left;
+            color: $accent2;
+            font-weight: bolder;
+            font-size: 7em;
+        }
+        &-bttn{
+            border: none;
+            font-size: 2.5em;
+            color: $accent5;
+            font-weight: bolder;
+            width: 10em;
+            height: 3em;
+            background-color: $accent10;
+            border: {
+                bottom-left-radius: 5% 16%;
+                top-left-radius: 5% 16%;
+                bottom-right-radius: 5% 16%;
+                top-right-radius: 5% 16%;
+            }
+            transition: .3s ease-in-out;
+            &:hover{
+                cursor: pointer;
+                color: $accent10;
+                background-color: #05386B;
+            }
+        }
+    }
+    &-right{
+        flex: 1;
+        position: relative;
+        &-image-1{
+            position: absolute;
+            top: 20%;
+            z-index: 2;
+            left: 17%;
+            transform: translate(-50%, -50%);
+            height: 20em;
+            transform: rotate(10deg);
+        }
+        &-image-2{
+            position: absolute;
+            top: 13%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 19em;
+            z-index: 1;
+            transform: rotate(-10deg);
+        }
+    }
+}
+

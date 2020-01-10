@@ -3,8 +3,6 @@ import Mobile from './mobile'
 import Tablet from './tablet'
 
 const Account = () =>{
-    const [ type, setType ] = useState("")
-
     const [ vpWidth, setVpWidth ] = useState(window.innerWidth)
 
     const display = () => {
