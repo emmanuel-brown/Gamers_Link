@@ -1,23 +1,26 @@
-@import '../../../components/cssUtils.scss';
+@import '../../../cssUtils.scss';
+
+body{
+    background-color: $accent54;
+}
 
 #Home-Desktop{
-    height: 100vh;
     .hero{
         height: 75vh;
-        background-color: $accent5;
+        // background-color: $accent54;
         position: relative;
         &-container{
-            height: 100vh;
+            // height: 100vh;
             position: relative;
             display: flex;
             // justify-content: space-around;
             margin: 0 1em;
             max-width: 3000px;
-            min-width: 1000px;
-            height: 800px;
-            background-color: transparent;
+            min-width: 900px;
+            // height: 800px;
+            // background-color: transparent;
             padding: 3em;
-            padding-top: 5em;
+            padding-top: 6em;
             padding-bottom: 0;
         }
     }
@@ -80,11 +83,21 @@
 
 
 #Home-Desktop .partners{
-    height: 10vh;
+    height: 8vh;
     background-color: $accent52;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 1.3em;
     color: $accent53;
+}
+
+@media only screen and (max-width: 1440px){
+    #Home-Desktop .hero-container{
+        &-left{
+            &-txt{
+                font-size: 6em;
+            }
+        }
+    }
 }

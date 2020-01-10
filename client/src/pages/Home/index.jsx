@@ -1,22 +1,12 @@
 import React, {useState} from 'react'
-import Desktop from './Desktop'
+import Hero from '../../components/home/hero'
+import Content from '../../components/home/content'
 
-const Home = () =>{
-
-    const [ vpWidth, setVpWidth ] = useState(window.innerWidth)
-
-    const display = () => {
-        if(vpWidth >= 1000) return <Desktop />
-        // if(vpWidth > 900) return <Tablet />
-        // if(vpWidth <= 900) return <Mobile />
-    }
-
-    const check = () => setVpWidth(window.innerWidth)
-
-    setInterval(check, 1000);
-    return(
-        display()
-    )
-}
+const Home = () =>(
+    <>
+        <Hero />
+        <Content />
+    </>
+)
 
 export default Home

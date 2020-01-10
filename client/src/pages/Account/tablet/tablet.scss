@@ -57,11 +57,12 @@ body{
                     height: 2em;
                     padding: 2px;
                     border: {
-                        bottom-left-radius: 3% 25%;
-                        top-left-radius: 3% 25%;
-                        bottom-right-radius: 3% 25%;
-                        top-right-radius: 3% 25%;
-                    } 
+                        bottom-left-radius: 1% 10%;
+                        top-left-radius: 1% 10%;
+                        bottom-right-radius: 1% 10%;
+                        top-right-radius: 1% 10%;
+                    }
+                    border: 1px solid $accent2; 
                 }
             }
             &-bttns{
