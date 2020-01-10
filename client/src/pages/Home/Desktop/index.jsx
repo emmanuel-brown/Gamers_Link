@@ -20,7 +20,13 @@ const Desktop = () =>{
                     </div>
                 </div>
             </section>
-
+            <section className="partners">
+                <p className="partners-txt">Rocket League</p>
+                <p className="partners-txt">Advance Warfare</p>
+                <p className="partners-txt">Grand Theft Auto</p>
+                <p className="partners-txt">Cyber Punk</p>
+                <p className="partners-txt">MineCraft</p>
+            </section>
         </main>
     )
 }

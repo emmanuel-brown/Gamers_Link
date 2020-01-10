@@ -78,3 +78,13 @@
     }
 }
 
+
+#Home-Desktop .partners{
+    height: 10vh;
+    background-color: $accent52;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3em;
+    color: $accent53;
+}
