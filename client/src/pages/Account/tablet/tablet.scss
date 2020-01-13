@@ -6,15 +6,6 @@ body{
 }
 
 #desktop{
-    .side-background{
-        pointer-events: none;
-        position: absolute;
-        z-index: 1;
-        height: 100vh;
-        width: 100%;
-        background: rgba(142,228,175, .5);
-        background: linear-gradient(90deg, rgba(142,228,175, .25) 50%, rgba(0,212,255,0) 50%);
-    }
     .form-box{
         display: flex;
         margin: 7em auto;
@@ -108,6 +99,23 @@ body{
                     font-weight: bold;
                 }
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1207px) {
+    #desktop{
+        .form-box{
+            width: auto;
+            margin: 8em 4em;
+            // .left{
+            //     margin: 0 1em;
+            //     display: none;
+            // }
+            // .right{
+            //     margin: 0 1em;
+            //     display: none; 
+            // }
         }
     }
 }

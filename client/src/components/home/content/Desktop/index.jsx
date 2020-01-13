@@ -1,6 +1,5 @@
 import React from 'react'
 import './content.scss'
-import bg1 from '../images/Bg1.svg'
 
 const Content = () =>(
     <section className="sections">

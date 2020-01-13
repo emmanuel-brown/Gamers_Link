@@ -6,8 +6,9 @@ body{
 
 #Home-Desktop{
     .hero{
-        height: 75vh;
+        min-height: 60vh;
         // background-color: $accent54;
+        padding-bottom: 1em;
         position: relative;
         &-container{
             // height: 100vh;

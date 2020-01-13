@@ -2,7 +2,7 @@
 
 @media only screen and (min-width: 601px) {
     body{
-        padding-top: 64px;
+        margin-top: 64px;
     }
 }
 
@@ -15,7 +15,7 @@
         z-index: 1000;
         display: flex;
         justify-content: space-between;
-        background-color: $accent1;
+        background-color: $accent2;
         height: 4em;
         .header{
             display: flex;
@@ -28,7 +28,7 @@
                 width: 2em;
             }
             &-txt{
-                color: $accent4;
+                color: $accent10;
                 font-size: 2em;
             }
         }
