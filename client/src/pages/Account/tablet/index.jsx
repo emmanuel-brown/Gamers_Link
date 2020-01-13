@@ -12,11 +12,10 @@ const Tablet = () =>{
         <main id="desktop">
             <div className="form-box">
                 <div className="left">
-                    
+                    <Login noSwitch={true}/>
                 </div>
                 <div className="right">
-                    { type === "signUp" && <SignUp change={ () => setType("login") } /> }
-                    { type === "login" && <Login change={ () => setType("signUp") }/> }
+                    <SignUp noSwitch={true} />
                 </div>
             </div>
         </main>

@@ -26,17 +26,47 @@ body{
         .left{
             width: 100%;
             background-color: $accent2;
-            &-content{
-                position: absolute;
-                z-index: 1000;
-                text-align: center;
-                &-img{
-                    height: 4em;
+            .header{
+                color: $accent10;
+            }
+            .form{
+                &-field{
+                    color: $accent10;
+                    &-text{
+                        border: 1px solid $accent10; 
+                    }
+                }
+                &-bttns{
+                    color: $accent2;
+                    &-bttn{
+                        background-color: $accent10;
+                        
+                    }
+                    
                 }
             }
         }
         .right{
             width: 100%;
+            width: 100%;
+            background-color: $accent10;
+            .header{
+                color: $accent2;
+            }
+            .form{
+                &-field{
+                    color: $accent2;
+                    &-text{
+                        border: 1px solid $accent2; 
+                    }
+                }
+                &-bttns{
+                    &-bttn{
+                        background-color: $accent2;
+                        color: $accent10;
+                    }
+                }
+            }
         }
     }
     #content{
@@ -53,7 +83,7 @@ body{
                     font-size: 1.5em;
                 }
                 &-text{
-                    border: none;
+                    // border: none;
                     height: 2em;
                     padding: 2px;
                     border: {
@@ -62,7 +92,7 @@ body{
                         bottom-right-radius: 1% 10%;
                         top-right-radius: 1% 10%;
                     }
-                    border: 1px solid $accent2; 
+                    // border: 1px solid $accent10; 
                 }
             }
             &-bttns{
@@ -71,8 +101,7 @@ body{
                 margin-top: 1em;
                 &-bttn{
                     border: none;
-                    background-color: $accent2;
-                    color: $accent3;
+                    // color: $accent3;
                     height: 3em;
                     width: 7em;
                     font-size: 1em;

@@ -23,6 +23,9 @@ const SignUp = props =>{
         )
     }
 
+    const noSwitch = {
+        display: props.noSwitch ? "none" : "block"
+    }
     return(
         <main id="content">
             <header className="header">
@@ -35,7 +38,7 @@ const SignUp = props =>{
                 {input("password", "Password:")}
                 <div className="form-bttns">
                     <input className="form-bttns-bttn" type="submit" value="Sign Up"/>
-                    <input className="form-bttns-bttn" type="button" value="Login" onClick={props.change}/>
+                    <input style={noSwitch} className="form-bttns-bttn" type="button" value="Login" onClick={props.change}/>
                 </div>
             </form>
         </main>
