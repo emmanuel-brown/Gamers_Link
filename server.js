@@ -33,9 +33,8 @@ client = mongoose.connect(process.env.ATLAS_URI, { useNewUrlParser: true, useUni
 //////////////////
 /// ENDPOINTS ///
 ////////////////
-const user = require('./routes/user')
-
-app.use('/user', user)
+app.use('/user', require('./routes/user'))
+app.use('/post', require('./routes/post'))
 
 
 app.listen(PORT, () => { console.log(`Listening on port ${PORT}`) })

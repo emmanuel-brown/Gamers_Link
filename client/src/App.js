@@ -13,6 +13,7 @@ import Navbar from './components/Navbar'
 import NotFound from './pages/NotFound'
 import Account from './pages/Account'
 import About from './pages/About'
+import Discover from './pages/Discover'
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
         <Switch>
           <Route path="/account" component={Account} />
           <Route path="/about" component={About} />
+          <Route path="/discover" component={Discover} />
           <Route path="/NotFound" component={NotFound} />
           <Redirect to="/NotFound" />
         </Switch>

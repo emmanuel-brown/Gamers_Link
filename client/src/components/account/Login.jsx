@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import useForm from '../../components/useForm'
-import validate from '../../components/validate'
+import useForm from '../useForm'
+import validate from '../validate'
 
 const Login = props =>{
     const [errMessage, setErrMessage] = useState("")
