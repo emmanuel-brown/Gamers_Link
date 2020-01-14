@@ -7,22 +7,17 @@ body{
 #Home-Desktop{
     .hero{
         min-height: 60vh;
+        max-width: 1700;
         // background-color: $accent54;
         padding-bottom: 1em;
         position: relative;
         &-container{
-            // height: 100vh;
             position: relative;
             display: flex;
-            // justify-content: space-around;
-            margin: 0 1em;
-            max-width: 3000px;
+            margin: 0 auto;
+            max-width: 1837px;
             min-width: 900px;
-            // height: 800px;
-            // background-color: transparent;
-            padding: 3em;
-            padding-top: 6em;
-            padding-bottom: 0;
+            padding: 6em 3em 0;
         }
     }
 }

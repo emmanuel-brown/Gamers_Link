@@ -22,16 +22,14 @@ const Content = () =>(
                     <p className="text sections-2-right-text">Hello developers and game creator. Finally a go to dedicated platform to intake valuable data from your game. Inform and get feedback for users users. *this text is not final</p>
                 </div>
             </section>
-            <section className="sections-3 section">
-                <section className="sections-3 section">
-                    <div className="sections-3-left">
-                        <img className="sections-3-left-img" src="https://images.unsplash.com/flagged/photo-1552725391-4ae757a7ff8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="developer"/>
-                    </div>
-                    <div className="sections-3-right">
-                        <h3 className="sections-3-right-header header">Gamers</h3>
-                        <p className="text sections-3-right-text">Feel like game developers should add more easter eggs, POST IT! Have a new amazing idea, POST IT! Had great breakfast, maybe don't post it.</p>
-                    </div>
-                    </section>
+            <section className="sections-3">
+                <div className="sections-3-left">
+                    <img className="sections-3-left-img" src="https://images.unsplash.com/flagged/photo-1552725391-4ae757a7ff8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="developer"/>
+                </div>
+                <div className="sections-3-right">
+                    <h3 className="sections-3-right-header header">Gamers</h3>
+                    <p className="text sections-3-right-text">Feel like game developers should add more easter eggs, POST IT! Have a new amazing idea, POST IT! Had great breakfast, maybe don't post it.</p>
+                </div>
             </section>
         </div>
     </section>

@@ -12,19 +12,21 @@ import Navbar from './components/Navbar'
 //Pages
 import NotFound from './pages/NotFound'
 import Account from './pages/Account'
-import Home from './pages/Home'
+import About from './pages/About'
 
 const App = () => {
 
   return(
     <BrowserRouter>
       <Navbar />
-      <Switch>
-        <Route path="/account" component={Account} />
-        <Route path="/" component={Home} />
-        <Route path="/NotFound" component={NotFound} />
-        <Redirect to="/NotFound" />
-      </Switch>
+      <div id="main">  
+        <Switch>
+          <Route path="/account" component={Account} />
+          <Route path="/about" component={About} />
+          <Route path="/NotFound" component={NotFound} />
+          <Redirect to="/NotFound" />
+        </Switch>
+      </div>
     </BrowserRouter>
   )
 }
