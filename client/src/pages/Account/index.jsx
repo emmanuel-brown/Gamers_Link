@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import Mobile from './mobile'
-import Tablet from './tablet'
+import Mobile from '../../components/account/mobile'
+import Tablet from '../../components/account/tablet'
 import styled from "styled-components"
 
 const Body = styled.body`
