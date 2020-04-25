@@ -22,7 +22,11 @@ const Navbar = () =>{
                     <p className="section-txt">About</p>
                     <p className="section-txt">Support</p>
                 </div>
-                <div className="section"></div>
+                <div className="section">
+                    <p className="section-txt">Profile</p>
+                    <p className="section-txt">Like/Dislikes</p>
+                    <p className="section-txt">Friend</p>
+                </div>
             </div>
         </nav>
     )
