@@ -4,10 +4,12 @@ const helmet = require('helmet')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const compression = require('compression')
+const cors = require('cors')
 const PORT = process.env.PORT || 4000
 
 const app = express()
 
+app.use(cors())
 app.use(compression())
 app.use(morgan('tiny'))
 app.use(express.urlencoded({ extended: true }))
@@ -31,9 +33,8 @@ client = mongoose.connect(process.env.ATLAS_URI, { useNewUrlParser: true, useUni
 //////////////////
 /// ENDPOINTS ///
 ////////////////
-const user = require('./routes/user')
-
-app.use('/user', user)
+app.use('/user', require('./routes/user'))
+app.use('/post', require('./routes/post'))
 
 
 app.listen(PORT, () => { console.log(`Listening on port ${PORT}`) })

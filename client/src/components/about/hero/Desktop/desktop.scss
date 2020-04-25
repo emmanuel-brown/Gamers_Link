@@ -1,0 +1,99 @@
+@import '../../../cssUtils.scss';
+
+body{
+    background-color: $accent54;
+}
+
+#Home-Desktop{
+    .hero{
+        min-height: 60vh;
+        max-width: 1700;
+        // background-color: $accent54;
+        padding-bottom: 1em;
+        position: relative;
+        &-container{
+            position: relative;
+            display: flex;
+            margin: 0 auto;
+            max-width: 1837px;
+            min-width: 900px;
+            padding: 6em 3em 0;
+        }
+    }
+}
+
+#Home-Desktop .hero-container{
+    &-left{
+        flex: 1;
+        &-txt{
+            text-align: left;
+            color: $accent2;
+            font-weight: bolder;
+            font-size: 7em;
+        }
+        &-bttn{
+            border: none;
+            font-size: 2.5em;
+            color: $accent5;
+            font-weight: bolder;
+            width: 10em;
+            height: 3em;
+            background-color: $accent10;
+            border: {
+                bottom-left-radius: 5% 16%;
+                top-left-radius: 5% 16%;
+                bottom-right-radius: 5% 16%;
+                top-right-radius: 5% 16%;
+            }
+            transition: .3s ease-in-out;
+            &:hover{
+                cursor: pointer;
+                color: $accent10;
+                background-color: #05386B;
+            }
+        }
+    }
+    &-right{
+        flex: 1;
+        position: relative;
+        &-image-1{
+            position: absolute;
+            top: 20%;
+            z-index: 2;
+            left: 17%;
+            transform: translate(-50%, -50%);
+            height: 20em;
+            transform: rotate(10deg);
+        }
+        &-image-2{
+            position: absolute;
+            top: 13%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 19em;
+            z-index: 1;
+            transform: rotate(-10deg);
+        }
+    }
+}
+
+
+#Home-Desktop .partners{
+    height: 8vh;
+    background-color: $accent52;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3em;
+    color: $accent53;
+}
+
+@media only screen and (max-width: 1440px){
+    #Home-Desktop .hero-container{
+        &-left{
+            &-txt{
+                font-size: 6em;
+            }
+        }
+    }
+}

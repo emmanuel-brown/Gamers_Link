@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
-import useForm from '../../components/useForm'
-import validate from '../../components/validate'
+import useForm from '../useForm'
+import validate from '../validate'
 
-const SignUp = props =>{
-    const submit = () => {
-        axios.post('/user/newUser', values)
-            .then(res => console.log(res.data))
-            .catch(() => console.log("err"))
-    }
+const Login = props =>{
+    const [errMessage, setErrMessage] = useState("")
     let include = []
+    const submit = () => {
+        const info = {}
+        include.map(input => info[input] = values[input])
+        axios.post('/user/login', info)
+            .then(user => console.log(user.data))
+            .catch(() => setErrMessage("Login failed please trying again later"))
+    }
+    
     const { handleChange, handleSubmit, values, errors } = useForm(submit, validate, include)
-
+    
     const input = (name, labelName) =>{
         include.push(name)
         return(
@@ -23,23 +27,26 @@ const SignUp = props =>{
         )
     }
 
+    const noSwitch = {
+        display: props.noSwitch ? "none" : "block"
+    }
+
     return(
         <main id="content">
             <header className="header">
-                <h1 className="header-txt">SignUp</h1>
+                <h1 className="header-txt">Login</h1>
             </header>
+            { errMessage && <p>{errMessage}</p> }
             <form onSubmit={ handleSubmit } className="form">
-                {input("firstName", "First Name:")}
-                {input("lastName", "Last Name:")}
                 {input("email", "Email:")}
                 {input("password", "Password:")}
                 <div className="form-bttns">
-                    <input className="form-bttns-bttn" type="submit" value="Sign Up"/>
-                    <input className="form-bttns-bttn" type="button" value="Login" onClick={props.change}/>
+                    <input className="form-bttns-bttn" type="submit" value="Login"/>
+                    <input style={noSwitch}className="form-bttns-bttn" type="button" value="Sign Up" onClick={props.change}/>
                 </div>
             </form>
         </main>
     )
 }
 
-export default SignUp
+export default Login

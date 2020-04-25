@@ -18,7 +18,6 @@ const MobileMenu = props =>{
                         {link("/support", "Suport")}
                     </div>
                 )
-                break;
             case "account":
                 return(
                     <div id="MobileMenu">
@@ -27,7 +26,6 @@ const MobileMenu = props =>{
                         {link("/friends", "Friends")}
                     </div>
                 )
-                break;
             default:
                 break;
         }

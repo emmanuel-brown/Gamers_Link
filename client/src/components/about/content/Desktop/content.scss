@@ -1,0 +1,84 @@
+@import '../../../cssUtils.scss';
+
+.part-one{
+    background-image: url("../../images/bg4.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3em 1em;
+}
+.part-two{
+    background-image: url("../../images/bg2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3em 1em;
+}
+
+.sections{
+    section{
+        margin-left: 2em;
+        height: fit-content;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+    img{
+        display: block;
+        height: 25em;
+        width: 25em;
+        margin: 0 auto;
+        border-radius: 25%;
+        // border: {
+        //     bottom-left-radius: 5% 5%;
+        //     top-left-radius: 5% 5%;
+        //     bottom-right-radius: 5% 5%;
+        //     top-right-radius: 5% 5%;
+        // }
+    }
+    .header{
+        color: $accent2;
+        font-size: 4em;
+        padding-right: .5em;
+    }
+    .text{
+        color: $accent9;
+        font-size: 2.5em;
+    }
+    &-1{
+        &-left{
+            flex: 1;
+            order: 1;
+            padding-right: 1em;
+        }
+        &-right{
+            flex: 1;
+            &-header{
+                padding-right: .5em;
+            }
+        }
+    }
+    &-2{
+        &-left{
+            flex: 1;
+            order: 1;
+        }
+        &-right{
+            flex: 1;
+            &-text{
+                padding-right: 2em;
+            }
+        }
+    }
+    &-3{
+        &-left{
+            flex: 1;
+            order: 1;
+        }
+        &-right{
+            flex: 1;
+            &-text{
+                padding-right: 2em;
+            }
+        }
+    }
+}

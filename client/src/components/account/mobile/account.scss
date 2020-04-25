@@ -1,0 +1,134 @@
+@import '../../../components/cssUtils.scss';
+
+body{
+    overflow: hidden;
+    background-color: $accent5;
+    background-color:#EDF5E1;
+    // background-image: linear-gradient(white 2px, transparent 2px),
+    // linear-gradient(90deg, white 2px, transparent 2px),
+    // linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+    // linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+    // background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    // background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+#choose{
+    height: 100vh;
+    .location{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 10em;
+        width: 10em;
+        border-radius: 100%;
+        background-color: $accent2;
+        color: $accent3;
+        font-size: 1.5em;
+        &-txt{
+            text-align: center;
+        }
+    }
+    .select{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-54%);
+        bottom: 5em;
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        margin: 1em 1em;
+        &-bttn{
+            height: 2em;
+            margin: .25em auto;
+            font-weight: bolder;
+            font-size: 2em;
+            border: 1px $accent3 solid;
+            background-color: $accent2;
+            color: #ffd700;
+            width: 10em;
+        }
+    }
+}
+
+#mobile{
+    #content{
+        .header{
+            margin: 0 auto;
+            width: 100%;
+            background-color: $accent1;
+            color: $accent3;
+            &-txt{
+                opacity: 1;
+                text-align: center;
+            }
+        }
+        .form{
+            color: $accent5;
+            padding: 2% 10%;
+            padding-bottom: 100%;
+            background-color: $accent1;
+            &-field{
+                color: $accent3;
+                display: flex;
+                flex-direction: column;
+                &-label{
+                    font-size: 1.2em;
+                    font-weight: bolder;
+                }
+                &-text{
+                    padding: .3em;
+                    font-size: 1.2em;
+                    outline: none;
+                    border: .15em solid $accent1;
+                    background-color: $accent5;
+                }
+                &-error{
+                    font-size: 12px;
+                }
+            }
+            &-bttns{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1em;
+                &-bttn{
+                    border: none;
+                    background-color: $accent3;
+                    color: $accent4;
+                    height: 3em;
+                    width: 7em;
+                    font-size: 1em;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width: 1000px) {
+        #content{
+            padding-top: 0;
+            background-color: $accent3;
+            position: absolute;
+            width: 500px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .header{
+                background-color: $accent1;
+                &-txt{
+                    color: $accent3;
+                }
+            }
+            .form{
+                background-color: rgba(142, 228, 175, 1);
+                background-color: $accent1;
+            }
+        }
+    }
+}
+
+
+

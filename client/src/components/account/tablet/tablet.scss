@@ -1,0 +1,121 @@
+@import '../../../components/cssUtils.scss';
+
+
+body{
+    overflow: scroll;
+}
+
+#desktop{
+    .form-box{
+        display: flex;
+        margin: 7em auto;
+        width: 1200px;
+        height: 700px;
+        background-color: $accent7;
+        // box-shadow: 0px 0px 28px 8px $accent3;
+        border: $accent2 3px solid;
+        .left{
+            width: 100%;
+            background-color: $accent2;
+            .header{
+                color: $accent10;
+            }
+            .form{
+                &-field{
+                    color: $accent10;
+                    &-text{
+                        border: 1px solid $accent10; 
+                    }
+                }
+                &-bttns{
+                    color: $accent2;
+                    &-bttn{
+                        background-color: $accent10;
+                        
+                    }
+                    
+                }
+            }
+        }
+        .right{
+            width: 100%;
+            width: 100%;
+            background-color: $accent10;
+            .header{
+                color: $accent2;
+            }
+            .form{
+                &-field{
+                    color: $accent2;
+                    &-text{
+                        border: 1px solid $accent2; 
+                    }
+                }
+                &-bttns{
+                    &-bttn{
+                        background-color: $accent2;
+                        color: $accent10;
+                    }
+                }
+            }
+        }
+    }
+    #content{
+        color: $accent2;
+        padding: 2em 6em;
+        .header{
+            font-size: 2em
+        }
+        .form{
+            &-field{
+                display: flex;
+                flex-direction: column;
+                &-label{
+                    font-size: 1.5em;
+                }
+                &-text{
+                    // border: none;
+                    height: 2em;
+                    padding: 2px;
+                    border: {
+                        bottom-left-radius: 1% 10%;
+                        top-left-radius: 1% 10%;
+                        bottom-right-radius: 1% 10%;
+                        top-right-radius: 1% 10%;
+                    }
+                    // border: 1px solid $accent10; 
+                }
+            }
+            &-bttns{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1em;
+                &-bttn{
+                    border: none;
+                    // color: $accent3;
+                    height: 3em;
+                    width: 7em;
+                    font-size: 1em;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1207px) {
+    #desktop{
+        .form-box{
+            width: auto;
+            margin: 8em 4em;
+            // .left{
+            //     margin: 0 1em;
+            //     display: none;
+            // }
+            // .right{
+            //     margin: 0 1em;
+            //     display: none; 
+            // }
+        }
+    }
+}
