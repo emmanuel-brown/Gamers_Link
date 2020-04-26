@@ -1,83 +1,189 @@
 @import '../../../cssUtils.scss';
 
-.part-one{
-    background-image: url("../../images/bg4.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 3em 1em;
-}
-.part-two{
-    background-image: url("../../images/bg2.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 3em 1em;
+/* START OF THE HERO */
+
+body{
+    background-color: $accent54;
 }
 
-.sections{
-    section{
-        margin-left: 2em;
-        height: fit-content;
+#AboutDesktop{
+    #Home-Desktop{
+        .hero{
+            min-height: 60vh;
+            max-width: 1700;
+            // background-color: $accent54;
+            padding-bottom: 1em;
+            position: relative;
+            &-container{
+                position: relative;
+                display: flex;
+                margin: 0 auto;
+                max-width: 1837px;
+                min-width: 900px;
+                padding: 6em 3em 0;
+            }
+        }
+    }
+    
+    #Home-Desktop .hero-container{
+        &-left{
+            flex: 1;
+            &-txt{
+                text-align: left;
+                color: $accent2;
+                font-weight: bolder;
+                font-size: 7em;
+            }
+            &-bttn{
+                border: none;
+                font-size: 2.5em;
+                color: $accent5;
+                font-weight: bolder;
+                width: 10em;
+                height: 3em;
+                background-color: $accent10;
+                border: {
+                    bottom-left-radius: 5% 16%;
+                    top-left-radius: 5% 16%;
+                    bottom-right-radius: 5% 16%;
+                    top-right-radius: 5% 16%;
+                }
+                transition: .3s ease-in-out;
+                &:hover{
+                    cursor: pointer;
+                    color: $accent10;
+                    background-color: #05386B;
+                }
+            }
+        }
+        &-right{
+            flex: 1;
+            position: relative;
+            &-image-1{
+                position: absolute;
+                top: 20%;
+                z-index: 2;
+                left: 17%;
+                transform: translate(-50%, -50%);
+                height: 20em;
+                transform: rotate(10deg);
+            }
+            &-image-2{
+                position: absolute;
+                top: 13%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 19em;
+                z-index: 1;
+                transform: rotate(-10deg);
+            }
+        }
+    }
+    
+    
+    #Home-Desktop .partners{
+        height: 8vh;
+        background-color: $accent52;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-bottom: 2em;
+        font-size: 1.3em;
+        color: $accent53;
     }
-    img{
-        display: block;
-        height: 25em;
-        width: 25em;
-        margin: 0 auto;
-        border-radius: 25%;
-        // border: {
-        //     bottom-left-radius: 5% 5%;
-        //     top-left-radius: 5% 5%;
-        //     bottom-right-radius: 5% 5%;
-        //     top-right-radius: 5% 5%;
-        // }
-    }
-    .header{
-        color: $accent2;
-        font-size: 4em;
-        padding-right: .5em;
-    }
-    .text{
-        color: $accent9;
-        font-size: 2.5em;
-    }
-    &-1{
-        &-left{
-            flex: 1;
-            order: 1;
-            padding-right: 1em;
-        }
-        &-right{
-            flex: 1;
-            &-header{
-                padding-right: .5em;
+    
+    @media only screen and (max-width: 1440px){
+        #Home-Desktop .hero-container{
+            &-left{
+                &-txt{
+                    font-size: 6em;
+                }
             }
         }
     }
-    &-2{
-        &-left{
-            flex: 1;
-            order: 1;
+    
+    /* END OF THE HERO */
+    
+    /* START OF CONTENT */
+    
+    .part-one{
+        background-image: url("../../images/bg4.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 3em 1em;
+    }
+    .part-two{
+        background-image: url("../../images/bg2.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 3em 1em;
+    }
+    
+    .sections{
+        section{
+            margin-left: 2em;
+            height: fit-content;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 2em;
         }
-        &-right{
-            flex: 1;
-            &-text{
-                padding-right: 2em;
+        img{
+            display: block;
+            height: 25em;
+            width: 25em;
+            margin: 0 auto;
+            border-radius: 25%;
+            // border: {
+            //     bottom-left-radius: 5% 5%;
+            //     top-left-radius: 5% 5%;
+            //     bottom-right-radius: 5% 5%;
+            //     top-right-radius: 5% 5%;
+            // }
+        }
+        .header{
+            color: $accent2;
+            font-size: 4em;
+            padding-right: .5em;
+        }
+        .text{
+            color: $accent9;
+            font-size: 2.5em;
+        }
+        &-1{
+            &-left{
+                flex: 1;
+                order: 1;
+                padding-right: 1em;
+            }
+            &-right{
+                flex: 1;
+                &-header{
+                    padding-right: .5em;
+                }
             }
         }
-    }
-    &-3{
-        &-left{
-            flex: 1;
-            order: 1;
+        &-2{
+            &-left{
+                flex: 1;
+                order: 1;
+            }
+            &-right{
+                flex: 1;
+                &-text{
+                    padding-right: 2em;
+                }
+            }
         }
-        &-right{
-            flex: 1;
-            &-text{
-                padding-right: 2em;
+        &-3{
+            &-left{
+                flex: 1;
+                order: 1;
+            }
+            &-right{
+                flex: 1;
+                &-text{
+                    padding-right: 2em;
+                }
             }
         }
     }

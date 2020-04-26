@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import './desktop.scss'
 import consoles from '../../images/console.svg'
 import computer from '../../images/computer.svg'
 
@@ -27,6 +26,5 @@ const Desktop = () =>(
         </section>
     </main>
 )
-
 
 export default Desktop

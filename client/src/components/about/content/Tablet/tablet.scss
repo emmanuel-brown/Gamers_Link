@@ -1,0 +1,50 @@
+@import '../../../cssUtils.scss';
+
+#AboutTablet{
+    #hero{
+        height: 90vh;
+        background-attachment: fixed;
+        background-image: url('https://images.unsplash.com/photo-1454789415558-bdda08f4eabb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');
+        .arrow{
+            width: 35px;
+            color: white;
+            %arrow{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                animation-fill-mode: forwards;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-duration: 1s;
+            }
+            &_1{
+                @extend %arrow;
+                height: 376px;
+                animation-name: move1;
+                animation-delay: .5s
+            }
+            &_2{
+                @extend %arrow;
+                height: 365px;
+                animation-name: move2;
+            }
+        }
+    }
+    
+    @keyframes move1{
+        0%{
+           bottom: 10px; 
+        }
+        100%{
+            bottom: -5px; 
+         }
+    }
+    @keyframes move2{
+        0%{
+           bottom: -18px; 
+        }
+        100%{
+            bottom: -36px; 
+         }
+    }
+}
