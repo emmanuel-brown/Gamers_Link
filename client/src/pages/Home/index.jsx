@@ -1,8 +1,13 @@
-import React, {useState, useEffect} from 'react'
-import './homes.scss'
+import React, { Suspense, lazy } from 'react'
+
+const Post = lazy(() => import('../../components/NewPost'))
 
 const Home = () =>(
-    <h1>Home</h1>
+    <>
+        <Suspense fallback={<div>loading...</div>}>
+            <Post/>
+        </Suspense>
+    </>
 )
 
 export default Home

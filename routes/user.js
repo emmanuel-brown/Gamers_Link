@@ -5,7 +5,7 @@ const Main_Url = "https://user-serveer.herokuapp.com/"
 
 router.post('/newUser', async (req, res) =>{
     try{
-        const account = await axios.post(`${Main_Url}/users/signup`, req.body)
+        const account = await axios.post(`http://localhost:5001/users/signup`, req.body)
             .then(res => res)
             .catch(() => console.log("api call failed"))
         res.send(account)

@@ -10,6 +10,7 @@ import Navbar from './components/Navbar'
 // import Footer from './components/Footer' 
 
 //Pages
+import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import Account from './pages/Account'
 import About from './pages/About'
@@ -22,10 +23,11 @@ const App = () => {
       <Navbar />
       <div id="main">  
         <Switch>
-          <Route path="/account" component={Account} />
-          <Route path="/about" component={About} />
-          <Route path="/discover" component={Discover} />
-          <Route path="/NotFound" component={NotFound} />
+          <Route exact path="/account" component={Account} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/discover" component={Discover} />
+          <Route exact path="/NotFound" component={NotFound} />
           <Redirect to="/NotFound" />
         </Switch>
       </div>

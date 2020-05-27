@@ -5,7 +5,7 @@ const useForm = (callback, validate, include) =>{
         subject: "",
         game: "",
         details: "",
-        postOwner: "EA",
+        postOwner: "",
         catagory: ""
     })
 

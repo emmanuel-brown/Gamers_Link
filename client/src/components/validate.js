@@ -4,6 +4,7 @@ export default function validation(values, include){
     let errors = {}
     let show = {}
 
+    // user start
     if(!values.firstName){
         errors.firstName = "Please enter a first name"
     }
@@ -18,7 +19,16 @@ export default function validation(values, include){
     if(!values.password){
         errors.password = "Please enter a password"
     }
+    // user end
 
+    // post start
+    if(!values.subject){
+        errors.subject = "Please enter a subject"
+    }
+    if(!values.game){
+        errors.game = "What's the game? Even if you make it up!"
+    }
+    // post end
     const includer = typeof include === "array" || include.length > 0
     includer && include.map(prop => errors[prop] ? show[prop] = errors[prop] : null)
     
